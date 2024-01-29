@@ -38,6 +38,10 @@ public class program {
         notebooks.add(noteBook5);
         notebooks.add(noteBook6);
 
+        for (Notebook notebook : notebooks) {
+            System.out.println(notebook);
+        }
+
 
        
 

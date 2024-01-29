@@ -86,4 +86,10 @@ public class Notebook {
         return (this.brand.hashCode() + this.color.hashCode() + this.hardDrive + this.memory + this.os.hashCode());
     }
 
+    @Override
+    public String toString() {
+
+        return String.format("Notebook, brand: %s, os: %s, memory: %d gb's, hard drive %d gb's, color: %s", this.brand, this.os, this.memory, this.hardDrive, this.color);
+    }
+
 }
