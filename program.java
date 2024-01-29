@@ -16,9 +16,31 @@
 // - Отфильтровать ноутбуки их первоначального множества и вывести проходящие по
 // условиям.
 
+import java.util.HashSet;
+import java.util.MissingFormatArgumentException;
+import java.util.Set;
 
 public class program {
     public static void main(String[] args) {
+
+        Notebook noteBook1 = new Notebook("MSI", "Windows11", 1024, 16, "silver");
+        Notebook noteBook2 = new Notebook("MSI", "Windows11", 2048, 8, "black");
+        Notebook noteBook3 = new Notebook("Lenovo", "Windows11", 512, 8, "black");
+        Notebook noteBook4 = new Notebook("HP", "Windows10", 512, 8, "yellow");
+        Notebook noteBook5 = new Notebook("Xiaomi", "Windows11", 1024, 8, "white");
+        Notebook noteBook6 = new Notebook("Asus", "Linux", 512, 4, "gray");
+
+        Set<Notebook> notebooks = new HashSet<>();
+        notebooks.add(noteBook1);
+        notebooks.add(noteBook2);
+        notebooks.add(noteBook3);
+        notebooks.add(noteBook4);
+        notebooks.add(noteBook5);
+        notebooks.add(noteBook6);
+
+
+       
+
         
     }
 }
