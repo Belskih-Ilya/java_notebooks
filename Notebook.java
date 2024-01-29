@@ -33,4 +33,57 @@ public class Notebook {
         this.color = color;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getHardDrive() {
+        return hardDrive;
+    }
+
+    public int getMemory() {
+        return memory;
+    }
+
+    public String getOs() {
+        return os;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setHardDrive(int hardDrive) {
+        this.hardDrive = hardDrive;
+    }
+
+    public void setMemory(int memory) {
+        this.memory = memory;
+    }
+
+    public void setOs(String os) {
+        this.os = os;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (!this.getClass().equals(obj.getClass())) return false;
+        Notebook note = (Notebook) obj;
+        return (this.brand.equals(note.getBrand()) && this.color.equals(note.getColor()) && this.hardDrive == note.getHardDrive() && this.memory == note.getMemory() && this.os.equals(note.getOs()));
+    }
+
+    @Override
+    public int hashCode() {
+        return (this.brand.hashCode() + this.color.hashCode() + this.hardDrive + this.memory + this.os.hashCode());
+    }
+
 }
