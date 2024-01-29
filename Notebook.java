@@ -17,8 +17,20 @@
 // условиям.
 
 
-public class program {
-    public static void main(String[] args) {
-        
+public class Notebook {
+
+    private String brand;
+    private String os;
+    private int hardDrive;
+    private int memory;
+    private String color;
+
+    public Notebook (String brand, String os, int hardDrive, int memory, String color) {
+        this.brand = brand;
+        this.os = os;
+        this.hardDrive = hardDrive;
+        this.memory = memory;
+        this.color = color;
     }
+
 }
