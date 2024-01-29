@@ -17,7 +17,7 @@
 // условиям.
 
 import java.util.HashSet;
-import java.util.MissingFormatArgumentException;
+import java.util.Scanner;
 import java.util.Set;
 
 public class program {
@@ -38,13 +38,37 @@ public class program {
         notebooks.add(noteBook5);
         notebooks.add(noteBook6);
 
-        for (Notebook notebook : notebooks) {
-            System.out.println(notebook);
-        }
-
-
-       
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите критерий для отбора ноутбука из списка");
+        String field = scanner.nextLine();
+        System.out.printf("Введите значение критерия: %s для отбора модели\n", field);
+        if (field.equals("brand")) { 
+            String value = scanner.nextLine();
+            for (Notebook notebook : notebooks) {
+                notebook.searchInBrand(value);
+            }
+        } if (field.equals("color")) { 
+            String value = scanner.nextLine();
+            for (Notebook notebook : notebooks) {
+                notebook.searchInColor(value);
+            }
+        } if (field.equals("os")) { 
+            String value = scanner.nextLine();
+            for (Notebook notebook : notebooks) {
+                notebook.searchInOs(value);
+            }
+        } if (field.equals("memory")) { 
+            int value = scanner.nextInt();
+            for (Notebook notebook : notebooks) {
+                notebook.searchInMemory(value);
+            }
+        } if (field.equals("hard drive")) { 
+            int value = scanner.nextInt();
+            for (Notebook notebook : notebooks) {
+                notebook.searchInHard(value);
+            }
+        } 
         
+        scanner.close();
     }
 }

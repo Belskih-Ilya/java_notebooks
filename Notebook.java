@@ -24,6 +24,7 @@ public class Notebook {
     private int hardDrive;
     private int memory;
     private String color;
+    private String[] fields = {"brand", "os", "hardDrive", "memory", "color"};
 
     public Notebook (String brand, String os, int hardDrive, int memory, String color) {
         this.brand = brand;
@@ -51,6 +52,10 @@ public class Notebook {
 
     public String getOs() {
         return os;
+    }
+
+    public String[] getFields() {
+        return fields;
     }
 
     public void setBrand(String brand) {
@@ -91,5 +96,27 @@ public class Notebook {
 
         return String.format("Notebook, brand: %s, os: %s, memory: %d gb's, hard drive %d gb's, color: %s", this.brand, this.os, this.memory, this.hardDrive, this.color);
     }
+
+    public void searchInBrand(String brand) {
+        if (this.brand.equals(brand)) System.out.println(this.toString()); 
+    }
+
+    public void searchInColor(String color) {
+        if (this.color.equals(color)) System.out.println(this.toString()); 
+    }
+
+    public void searchInOs(String os) {
+        if (this.os.equals(os)) System.out.println(this.toString()); 
+    }
+
+    public void searchInMemory(int memory) {
+        if (this.memory == memory) System.out.println(this.toString()); 
+    }
+
+    public void searchInHard(int hard) {
+        if (this.hardDrive == hard) System.out.println(this.toString()); 
+    }
+
+    
 
 }
